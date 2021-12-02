@@ -1,7 +1,7 @@
 #!/bin/bash
 if [[ `command -v net-tools` ]];
     then
-      apt install net-tools
+      apt install net-tools -y >/dev/null 2>&1
     else
         echo ''
         fi
@@ -73,7 +73,7 @@ elif [[ $option == 2 ]]
                 printf "\nNikto is not installed, Installing it for you.\n"
                 sleep 1
                 echo "Installing Nikto"
-                apt-get install nikto -y
+                apt-get install nikto -y >/dev/null 2>&1
                 echo "<<<<<<<< Running Nikto >>>>>>>>"
                 nikto -host $ip
                 fi
@@ -87,7 +87,7 @@ elif [[ $option == 2 ]]
                 printf "\nUniscan is not installed, Installing it for you.\n"
                 sleep 1
                 echo "Installing Uniscan"
-                apt-get install uniscan -y
+                apt-get install uniscan -y >/dev/null 2>&1
                 echo "<<<<<<<< Running Uniscan >>>>>>>>"
                 uniscan -u $ip -qweds
                 fi
@@ -115,7 +115,7 @@ elif [[ $option == 2 ]]
                 dirsearch -u $ip
                 else
                     printf "\n Dirsearch is not installed, Installing it for you."
-                    apt install dirsearch -y
+                    apt install dirsearch -y >/dev/null 2>&1
                     sleep 1
                     echo "<<<<<<<< Running dirsearch >>>>>>>>"
                     sleep 1
@@ -130,7 +130,7 @@ elif [[ $option == 2 ]]
                     else
                         echo "dirb not installed, Installing it for you."
                         sleep 1
-                        apt install dirb -y
+                        apt install dirb -y >/dev/null 2>&1
                         echo "<<<<<<<< Running dirb >>>>>>>>"
                         dirb_search
                         fi
@@ -141,7 +141,7 @@ elif [[ $option == 2 ]]
                     else
                         echo "Gobuster is not installed, Installing it for you."
                         sleep 1
-                        apt install gobuster -y
+                        apt install gobuster -y >/dev/null 2>&1
                         sleep 2
                         echo "Successfully installed gobuster!"
                         sleep 1
@@ -177,7 +177,7 @@ echo -e "\nEnter the target:\c\n"
             sleep 2
             echo "Installing whatweb"
             sleep 1
-            apt install whatweb -y
+            apt install whatweb -y >/dev/null 2>&1
             sleep 2
             echo "<<<<<<<< Running whatweb >>>>>>>>"
         whatweb -v $ip
@@ -192,7 +192,7 @@ echo -e "\nEnter the target:\c\n"
             sleep 2
             echo "Installing Whois"
             sleep 1
-            apt install whois -y
+            apt install whois -y >/dev/null 2>&1
             sleep 2
             echo "<<<<<<<< Running WhoisLookup >>>>>>>>"
         whois $ip
@@ -212,7 +212,7 @@ echo -e "\nEnter the target:\c\n"
             sleep 2
             echo "Installing Traceroute"
             sleep 1
-            apt install traceroute -y
+            apt install traceroute -y >/dev/null 2>&1
             sleep 2
             echo "<<<<<<<< Running traceroute >>>>>>>>"
         traceroute $ip
@@ -227,7 +227,7 @@ echo -e "\nEnter the target:\c\n"
             sleep 2
             echo "Installing dnsenum"
             sleep 1
-            apt install dnsenum -y
+            apt install dnsenum -y >/dev/null 2>&1
             sleep 2
             echo "<<<<<<<< Running dnsenum >>>>>>>>"
         dnsenum $ip
@@ -242,7 +242,7 @@ echo -e "\nEnter the target:\c\n"
             sleep 2
             echo "Installing dnsrecon"
             sleep 1
-            apt install dnsrecon -y
+            apt install dnsrecon -y >/dev/null 2>&1
             sleep 2
             echo "<<<<<<<< Running dnsrecon >>>>>>>>"
         dnsrecon -d $ip
@@ -257,7 +257,7 @@ echo -e "\nEnter the target:\c\n"
             sleep 2
             echo "Installing theHarvester"
             sleep 1
-            apt install theharvester -y
+            apt install theharvester -y >/dev/null 2>&1
             sleep 2
             echo "<<<<<<<< Running theHarvester >>>>>>>>"
         theHarvester -d $ip -d all
