@@ -9,6 +9,6 @@ All in one tool for footprinting, scanning and enumeration about the target webs
 
 1. git clone https://github.com/Munazirul/WebTool
 2. cd WebTool
-3. chmod +x WebTool
-4. sudo ./WebTool
+3. chmod +x WebTool.sh
+4. sudo ./WebTool.sh
 5. BOOM!
